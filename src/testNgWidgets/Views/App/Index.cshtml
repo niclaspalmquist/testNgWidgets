@@ -1,15 +1,21 @@
 @{
-   ViewBag.Title = "Test NgWindow";
+   ViewBag.Title = "Test NgWidgets";
 }
-<div>
-   <div>{{demo.settings}}</div>
-   <div><input type="text" ng-model="demo.settings.height" /></div>
-   <div><input type="text" ng-model="demo.settings.width" /></div>
-   <div><button ng-click="demo.Open()">OPEN</button></div>
+<div class="col-md-6 col-md-offset-3">
+   <div>Settings: {{demo.settings}}</div>
+   <div class="form-group"><label>Height</label><input class="form-control" type="text" ng-model="demo.settings.height" /></div>
+   <div class="form-group"><label>Height</label><input class="form-control" type="text" ng-model="demo.settings.width" /></div>
+   <div><button class="btn btn-sm btn-success"  ng-click="demo.NewForm()">Open new form</button></div>
 
-   <ngx-window ngx-settings="demo.settings">
+   <div id="formsWrapper">
+
+   </div>
+
+   @*<ngx-window ngx-settings="demo.settings">
       <div>Title</div>
       <div>Content</div>
-   </ngx-window>
+   </ngx-window>*@
+
+
 
 </div>
