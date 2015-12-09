@@ -1,0 +1,15 @@
+@{
+   ViewBag.Title = "Test NgWindow";
+}
+<div>
+   <div>{{demo.settings}}</div>
+   <div><input type="text" ng-model="demo.settings.height" /></div>
+   <div><input type="text" ng-model="demo.settings.width" /></div>
+   <div><button ng-click="demo.Open()">OPEN</button></div>
+
+   <ngx-window ngx-settings="demo.settings">
+      <div>Title</div>
+      <div>Content</div>
+   </ngx-window>
+
+</div>

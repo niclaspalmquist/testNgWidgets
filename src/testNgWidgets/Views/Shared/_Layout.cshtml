@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html ng-app="App">
+<head>
+   <meta name="viewport" content="width=device-width" />
+   <link rel="stylesheet" href="~/css/ngx.base.css" />
+
+   <title>@ViewBag.Title</title>
+</head>
+<body ng-controller="DemoController as demo">
+   <div id="wrapper">
+      <div>
+@RenderBody()
+      </div>
+   </div>
+
+   <div class="scripts">
+
+      <script type="text/javascript" src="~/lib/angular/angular.min.js"></script>
+      <script type="text/javascript" src="~/lib/ngwidgets/ngxcore.js"></script>
+      <script type="text/javascript" src="~/lib/ngwidgets/ngxwindow.js"></script>
+      <script type="text/javascript" src="~/lib/ui-router/ui-router.min.js"></script>
+      <script type="text/javascript" src="~/js/app/App.js"></script>
+      <script type="text/javascript" src="~/js/demo/DemoController.js"></script>
+   </div>
+
+</body>
+</html>
