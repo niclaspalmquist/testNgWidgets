@@ -19,5 +19,10 @@ namespace testNgWidgets.Controllers.Web
       {
          return View();
       }
+
+      public IActionResult jqxAngular()
+      {
+         return View();
+      }
    }
 }

@@ -1,0 +1,42 @@
+﻿@{
+   ViewBag.Title = "Test JqxAngular";
+}
+@section Styles {
+   <link rel="stylesheet" href="~/css/jqx.base.css" />
+}
+@section Scripts {
+   <script type="text/javascript" src="~/lib/jquery/dist/jquery.min.js"></script>
+   <script type="text/javascript" src="~/lib/angular/angular.min.js"></script>
+   <script type="text/javascript" src="~/lib/jqwidgets/jqxcore.js"></script>
+   <script type="text/javascript" src="~/lib/jqwidgets/jqxwindow.js"></script>
+   <script type="text/javascript" src="~/lib/jqwidgets/jqxbuttons.js"></script>
+   <script type="text/javascript" src="~/lib/jqwidgets/jqxscrollbar.js"></script>
+   <script type="text/javascript" src="~/lib/jqwidgets/jqxpanel.js"></script>
+   <script type="text/javascript" src="~/lib/jqwidgets/jqxangular.js"></script>
+   <script type="text/javascript">
+      (function () {
+
+         "use strict";
+
+         angular.module("App", ["jqwidgets"]);
+
+      }());
+   </script>
+   <script type="text/javascript" src="~/js/demo/DemoController.js"></script>
+}
+
+<div ng-app="App">
+   <div ng-controller="DemoController as demo">
+      <div class="col-md-6 col-md-offset-3">
+         <div><a class="btn btn-sm btn-success" href="/app/index">Back</a></div>
+         <div>Settings: {{demo.settings}}</div>
+         <div class="form-group"><label>Height</label><input class="form-control" type="text" ng-model="demo.settings.height" /></div>
+         <div class="form-group"><label>Height</label><input class="form-control" type="text" ng-model="demo.settings.width" /></div>
+         <div><button class="btn btn-sm btn-success" ng-click="demo.NewFormJqx()">Open new form</button></div>
+
+         <div id="formsWrapper">
+
+         </div>
+      </div>
+   </div>
+</div>
