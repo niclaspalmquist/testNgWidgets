@@ -15,18 +15,16 @@
 
       var formsWrapper = angular.element(document.querySelector('#formsWrapper'));
 
-      // Mycket enkel variant för detta test
-      var newFormTemplate = '<ngx-window ngx-settings="demo.settings" ngx-on-close="demo.close($event)"><div>New Window</div><div>New Content</div></ngx-window>';
 
       demo.NewForm = function () {
          formNo += 1;
-         var newFormTemplate = '<ngx-window ngx-settings="demo.settings" ngx-on-close="demo.close($event)"><div>New Window ' + formNo + '</div><div>New Content</div></ngx-window>';
+         var newFormTemplate = '<ngx-window id="ngWindow' + formNo + '" ngx-settings="demo.settings" ngx-on-close="demo.close($element)"><div>New Window ' + formNo + '</div><div>New Content</div></ngx-window>';
          formsWrapper.prepend(newFormTemplate);
          $compile(formsWrapper)($scope);
       };
 
-      demo.close = function (event) {
-         demo.settings.apply('destroy');
+      demo.close = function (element) {
+         $('#'+element.currentTarget.id).remove();
       }
 
       demo.settings = {
