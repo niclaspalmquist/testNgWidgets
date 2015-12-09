@@ -22,7 +22,7 @@
          $compile(formsWrapper)($scope);
       };
 
-      demo.NewForm = function () {
+      demo.NewFormNg = function () {
          formNo += 1;
          var newFormTemplate = '<ngx-window id="ngWindow' + formNo + '" ngx-settings="demo.settings" ngx-on-close="demo.close($element)"><div>New Window ' + formNo + '</div><div>New Content</div></ngx-window>';
          formsWrapper.prepend(newFormTemplate);
