@@ -14,10 +14,13 @@
       var formNo = 0;
 
       var formsWrapper = angular.element(document.querySelector('#formsWrapper'));
+
+      // Mycket enkel variant för detta test
       var newFormTemplate = '<ngx-window ngx-settings="demo.settings" ngx-on-close="demo.close($event)"><div>New Window</div><div>New Content</div></ngx-window>';
 
       demo.NewForm = function () {
-         formNo =+ 1;
+         formNo += 1;
+         var newFormTemplate = '<ngx-window ngx-settings="demo.settings" ngx-on-close="demo.close($event)"><div>New Window ' + formNo + '</div><div>New Content</div></ngx-window>';
          formsWrapper.prepend(newFormTemplate);
          $compile(formsWrapper)($scope);
       };
