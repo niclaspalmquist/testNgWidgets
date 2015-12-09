@@ -9,5 +9,15 @@ namespace testNgWidgets.Controllers.Web
       {
          return View();
       }
+
+      public IActionResult ngWidgets()
+      {
+         return View();
+      }
+
+      public IActionResult jqWidgets()
+      {
+         return View();
+      }
    }
 }

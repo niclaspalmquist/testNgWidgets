@@ -1,15 +1,15 @@
 ﻿<!DOCTYPE html>
 
-<html ng-app="App">
+<html>
 <head>
    <meta name="viewport" content="width=device-width" />
-   <link rel="stylesheet" href="~/css/ngx.base.css" />
+@RenderSection("Styles",false)
    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
    <link rel="stylesheet" href="~/lib/bootswatch/superhero/bootstrap.min.css" />
 
    <title>@ViewBag.Title</title>
 </head>
-<body ng-controller="DemoController as demo">
+<body>
    <div id="wrapper">
       <div>
 @RenderBody()
@@ -20,12 +20,7 @@
 
       <script type="text/javascript" src="~/lib/jquery/dist/jquery.min.js"></script>
       <script type="text/javascript" src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
-      <script type="text/javascript" src="~/lib/angular/angular.min.js"></script>
-      <script type="text/javascript" src="~/lib/ngwidgets/ngxcore.js"></script>
-      <script type="text/javascript" src="~/lib/ngwidgets/ngxwindow.js"></script>
-      <script type="text/javascript" src="~/lib/ui-router/ui-router.min.js"></script>
-      <script type="text/javascript" src="~/js/app/App.js"></script>
-      <script type="text/javascript" src="~/js/demo/DemoController.js"></script>
+@RenderSection("Scripts",false)
    </div>
 
 </body>
