@@ -3,7 +3,7 @@
 (function () {
 
    "use strict";
-
+   //dessa är i conflict, funkar inte så här.
    angular.module("App", ["ngwidgets", "jqwidgets"]);
 
 }());

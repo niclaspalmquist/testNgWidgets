@@ -20,6 +20,8 @@
          var newFormTemplate = '<jqx-window id="jqxWindow' + formNo + '" jqx-settings="demo.settings" jqx-on-close="demo.close($element)"><div>New Window ' + formNo + '</div><div>New Content</div></jqx-window>';
          formsWrapper.prepend(newFormTemplate);
          $compile(formsWrapper)($scope);
+         demo.settings.position.x += 10;
+         demo.settings.position.y += 10;
       };
 
       demo.NewFormNg = function () {
@@ -42,8 +44,8 @@
          maxHeight:980,
          maxWidth: 1900,
          position: {
-            x: 500,
-            y: 200
+            x: 10,
+            y: 280
          },
          autoOpen: true
          
